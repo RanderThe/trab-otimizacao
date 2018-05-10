@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="StyleSheet" type="text/css" href="css/estilos.css"
+	media="screen" />
+<title>Benfica Web Store</title>
+</head>
+<h:body bgcolor="#E6E6A">
+	<f:view>
+		<center>
+			<h3>Problema de Mix de Produção</h3>
+			<h:form>
+				<p:dataTable id="constraintsFields"
+					value="#{problemBO.problem.constraints}" var="constraint">
+					<p:column>
+						<p:dataTable value="#{constraint.items.entrySet()}" var="value">
+						<p:column>
+								<h:outputText value="#{value.key}" />
+							</p:column>
+							<p:column>
+								<h:inputText value="#{constraint.items[value.key]}" />
+							</p:column>
+						</p:dataTable>
+					</p:column>
+					<p:column>
+						<h:outputLabel for="bound" value=" &gt;= " rendered="#{problemBO.typeProblem eq 1}" />
+						<h:outputLabel for="bound" value=" &lt;= " rendered="#{problemBO.typeProblem eq 2}" />
+						<h:inputText id="bound" value="#{constraint.bound}" />
+					</p:column>
+
+				</p:dataTable>				
+
+				<h:outputText value="Função Objetiva:"></h:outputText>
+				<h:dataTable id="columnsFields" value="#{problemBO.problem.columns}"
+					var="column">
+					<h:column>
+						<h:outputText value="#{column.label}=" />
+					</h:column>
+					<h:column>
+						<h:inputText value="#{column.value}" />
+					</h:column>
+				</h:dataTable>
+				<center>
+					<h:commandButton value="Calcular" action="#{problemBO.calculate()}"
+						styleClass="richButton" />
+				</center>
+			</h:form>
+		</center>
+	</f:view>
+</h:body>
+</html>

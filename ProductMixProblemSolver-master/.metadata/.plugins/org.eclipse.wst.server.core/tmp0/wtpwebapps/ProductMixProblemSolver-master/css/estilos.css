@@ -1,0 +1,393 @@
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+
+{
+
+    /*Define  que todos os elementos da página, ficarão em negrito e com a fonte arial */
+
+    font-weight: bold;
+
+    font-family: arial;
+
+    /*Define a tamanho da fonte para todos os elementos */
+
+    font-size: 10px;
+
+}
+ 
+/* Type */
+
+    html {
+        font-size: 13pt;
+    }
+
+        @media screen and (max-width: 1680px) {
+
+            html {
+                font-size: 11pt;
+            }
+
+        }
+
+        @media screen and (max-width: 1280px) {
+
+            html {
+                font-size: 11pt;
+            }
+
+        }
+
+        @media screen and (max-width: 980px) {
+
+            html {
+                font-size: 12pt;
+            }
+
+        }
+
+        @media screen and (max-width: 736px) {
+
+            html {
+                font-size: 12pt;
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {
+
+            html {
+                font-size: 12pt;
+            }
+
+        }
+
+    body {
+        background-color: #fff;
+        color: #444;
+    }
+
+    body, input, select, textarea {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+    strong, b {
+        font-weight: 600;
+    }
+
+    em, i {
+        font-style: italic;
+    }
+
+    p {
+        margin: 0 0 2rem 0;
+    }
+
+        p.special {
+            text-transform: uppercase;
+            font-size: .75rem;
+            font-weight: 300;
+            margin: 0 0 .5rem 0;
+            padding: 0 0 1rem 0;
+            letter-spacing: .25rem;
+        }
+
+            p.special:after {
+                content: '';
+                position: absolute;
+                margin: auto;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 50%;
+                height: 1px;
+                background-color: rgba(0, 0, 0, 0.125);
+            }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0 0 1rem 0;
+    }
+
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+
+    h6 {
+        font-size: 0.7rem;
+    }
+
+    sub {
+        font-size: 0.8rem;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    sup {
+        font-size: 0.8rem;
+        position: relative;
+        top: -0.5rem;
+    }
+
+    blockquote {
+        border-left: solid 4px;
+        font-style: italic;
+        margin: 0 0 2rem 0;
+        padding: 0.5rem 0 0.5rem 2rem;
+    }
+
+    code {
+        border-radius: 2px;
+        border: solid 1px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        margin: 0 0.25rem;
+        padding: 0.25rem 0.65rem;
+    }
+
+    pre {
+        -webkit-overflow-scrolling: touch;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        margin: 0 0 2rem 0;
+    }
+
+        pre code {
+            display: block;
+            line-height: 1.75;
+            padding: 1rem 1.5rem;
+            overflow-x: auto;
+        }
+
+    hr {
+        border: 0;
+        border-bottom: solid 1px;
+        margin: 2rem 0;
+    }
+
+        hr.major {
+            margin: 3rem 0;
+        }
+
+    .align-left {
+        text-align: left;
+    }
+
+    .align-center {
+        text-align: center;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+
+    input, select, textarea {
+        color: #555;
+    }
+
+    a {
+        color: #8a4680;
+    }
+
+    strong, b {
+        color: #555;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #555;
+    }
+
+    blockquote {
+        border-left-color: rgba(144, 144, 144, 0.25);
+    }
+
+    code {
+        background: rgba(144, 144, 144, 0.075);
+        border-color: rgba(144, 144, 144, 0.25);
+    }
+
+    hr {
+        border-bottom-color: rgba(144, 144, 144, 0.25);
+    }
+ 
+
+.Bimage{
+     background-image:url("C:\Users\RanderNote\Documents\Trab_Otimizacao_em_Sistemas_Computacionais\src\main\webapp\Images\bg.jpg");
+ }
+
+
+
+.edit {
+
+    /*Define a borda do elemento, com um efeito de baixo-relevo menor que o padrão */
+
+    border: 1px inset;
+
+    /*Especifica a cor cinza, como pano de fundo do elemento */
+
+    background-color: #D3D3D3;
+
+    /*Especifica como preta a  cor da fonte do elemento */
+
+    color: #000000;
+
+}
+
+ 
+.richButton {
+    margin:0 5px 0 0;
+    padding:5px 10px 5px 10px;
+    height:29px;
+    font-size:12px;
+    color:#262626;
+    font-weight:bold;
+    border:1px #ccc solid;
+    border-radius:5px;
+    cursor:pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    /* IE10 Consumer Preview */
+    background: -ms-linear-gradient(top, #FFFFFF 0%, #E3E3E3 100%);
+    /* Mozilla Firefox */
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #E3E3E3 100%);
+    /* Opera */
+    background: -o-linear-gradient(top, #FFFFFF 0%, #E3E3E3 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #E3E3E3));
+    /* Webkit (Chrome 11+) */
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #E3E3E3 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background: linear-gradient(to bottom, #FFFFFF 0%, #E3E3E3 100%);
+}
+.richButton:hover:enabled {
+    /* IE10 Consumer Preview */
+    background: -ms-linear-gradient(top, #FFFFFF 0%, #CCCCCC 100%);
+    /* Mozilla Firefox */
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #CCCCCC 100%);
+    /* Opera */
+    background: -o-linear-gradient(top, #FFFFFF 0%, #CCCCCC 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #CCCCCC));
+    /* Webkit (Chrome 11+) */
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #CCCCCC 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background: linear-gradient(to bottom, #FFFFFF 0%, #CCCCCC 100%);
+}
+.richButton:active:enabled {
+    /* IE10 Consumer Preview */
+    background: -ms-linear-gradient(top, #F0F0F0 0%, #CCCCCC 100%);
+    /* Mozilla Firefox */
+    background: -moz-linear-gradient(top, #F0F0F0 0%, #CCCCCC 100%);
+    /* Opera */
+    background: -o-linear-gradient(top, #F0F0F0 0%, #CCCCCC 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F0F0F0), color-stop(1, #CCCCCC));
+    /* Webkit (Chrome 11+) */
+    background: -webkit-linear-gradient(top, #F0F0F0 0%, #CCCCCC 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background: linear-gradient(to bottom, #F0F0F0 0%, #CCCCCC 100%);
+}
+.richButton:disabled {
+    font-weight: normal;
+    color: #888888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form { font: normal 0.7em Trebuchet MS, Arial, sans-serif; }
+.form fieldset { border: 2px solid #f4f4f4; padding: 10px; margin: 5px 0; color: #006700 }
+.form legend { border: 1px solid #CFE4F5; padding-left: 10px; padding-right: 10px; font: bolder 1.4em Trebuchet MS, Arial, sans-serif }
+.form label { float: left; font: normal 1.4em Trebuchet MS, Arial, sans-serif; height: 18px; margin: 2px; width: 105px }
+
+.form input,
+.form select,
+.form textarea { border: 1px solid #800080; padding: 2px; padding-left: 4px; padding-right: 4px; margin: 4px 2px; color: #003300 }
+.form select { border: 1px solid #006700; margin: 2px; color: #003300 }
+.form input:focus,
+.form select:focus,
+.form textarea:focus { background: #f4f4f4; border: 1px solid #333; }
+.form input.image { background: none; border: 0; padding: 0 }
+
+.button, .button:focus {
+background:url(../images/btn-bg.gif) no-repeat !important; width:74px; height:23px;
+cursor:pointer; color: #006700; font-weight: bolder; border: 0 !important;
+}
+.big-button, .big-button:focus {
+background:url(../images/btn-bg-big.gif) no-repeat !important; width:130px; height:23px;
+cursor:pointer; color: #006700; border:0px !important; font-weight: bolder;
+}
+.small-button {
+background:url(../images/btn-bg-small.gif) no-repeat; width:32px; height:23px;
+cursor:pointer; border: 0px; color: #006700; font-weight: bolder; border: 0 !important;
+}
+input.cb {
+border: 0 !important;
+height: 10px;
+}
+label.cb {
+float: none !important;
+}
+.form fieldset .required {
+color: red;
+}
+.form #select_signature_city_id select {
+width: 310px;
+}
+.form p {
+margin-bottom: 0px !important;
+font: normal 1.4em Trebuchet MS, Arial, sans-serif !important;
+line-height: 2em !important;
+color: black;
+}
+.button-box {
+border-top: 2px solid #E9E9E9;
+font: normal 1.4em Trebuchet MS, Arial, sans-serif !important;
+padding: 10px;
+margin-top: 10px;
+text-align: right;
+}
+.button-box span {
+float: left;
+}
+
+
+

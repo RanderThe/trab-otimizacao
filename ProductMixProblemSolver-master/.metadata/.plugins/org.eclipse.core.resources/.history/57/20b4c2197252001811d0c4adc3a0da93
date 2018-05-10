@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="StyleSheet" type="text/css" href="css/estilos.css"
+	media="screen" />
+<title>Trabalho de Otimização em Sistemas Computacionais</title>
+</head>
+<h:body>
+	<f:view>
+		<center>
+			<h3>Problema de Mix de Produção</h3>
+			<h:form>
+				
+				<h:outputLabel value="Qual o tipo de problema? "
+					for="typeProblem" />
+				<h:selectOneMenu id="typeProblem" value="#{problemBO.typeProblem}">
+					<f:selectItem itemValue="#{problemBO.min}" itemLabel="Minimização" />
+					<f:selectItem itemValue="#{problemBO.max}" itemLabel="Maximização" />
+				</h:selectOneMenu>
+				<br></br>
+				<br></br>
+
+				<h:outputLabel value="Qual o número de variáveis do problema? "
+					for="columns" />
+				<h:inputText id="columns" binding="#{numberOfColumns}"
+					styleClass="textarea" size="10" />
+				<br></br>
+				<br></br>
+				<h:outputLabel value="Qual o número de restrições? "
+					for="constraints" />
+				<h:inputText id="constraints" binding="#{numberOfConstraints}"
+					styleClass="textarea" size="10" />
+				<br></br>
+				<br></br>
+				<center>
+					<h:commandButton value="Iniciar"
+						action="#{problemBO.start(numberOfColumns.value, numberOfConstraints.value)}"
+						styleClass="richButton" />
+				</center>
+			</h:form>
+		</center>
+	</f:view>
+</h:body>
+</html>
